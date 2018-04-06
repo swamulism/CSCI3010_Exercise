@@ -22,11 +22,9 @@ CSCI 3010 Programming Project Workshop Practice Exercise 14
 
 - [x] Crated Math_utils.cpp
 
-- [ ] Implement static method: bool IsSquare(int num) — returns true iff num is a square (1, 4, 16, 25, etc)
+- [x] Implement static method: bool IsSquare(int num) — returns true iff num is a square (1, 4, 16, 25, etc)
 
-- [ ] Implement static method: int GetDigit(int num, int place) — returns the digit at place in the number. Place should be base ten:
-
-- [ ] Implement static method: GetDigit(17, 1) returns 7, GetDigit(17, 10) returns 1, GetDigit(17, 100) throws an invalid_argument exception, GetDigit(12347, 1000) returns 2
+- [x] Implement static method: int GetDigit(int num, int place) — returns the digit at place in the number. Place should be base ten: GetDigit(17, 1) returns 7, GetDigit(17, 10) returns 1, GetDigit(17, 100) throws an invalid_argument exception, GetDigit(12347, 1000) returns 2
 
 - [ ] Implement static method:  bool EqualParity(int x, int y) — returns true iff x and y have equal parity (both odd or both even)
 

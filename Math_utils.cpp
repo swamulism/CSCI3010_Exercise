@@ -7,6 +7,7 @@
 #include <cmath>
 #include <stdexcept>
 #include <cstdlib>
+#include <vector>
 using namespace std;
 
 bool Math::IsSquare(int num){
@@ -29,7 +30,15 @@ int Math::GetDigit(int num, int place) {
 	}
 }
 
-int main() {
-	Math m;
-	return 0;
+bool Math::EqualParity(std::vector<int> nums) {
+	if(nums.size() > 2) {
+		return true;
+	}
+	int parity = nums[0] % 2;
+	for(uint i = 1; i < nums.size(); i++) {
+		if (nums[i] % 2 != parity) {
+			return false;
+		}
+	}
+	return true;
 }
