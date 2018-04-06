@@ -11,6 +11,6 @@ public:
 	static bool EqualParity(int x, int y);
 	static bool EqualParity(vector<int> nums);
 private:
-}
+};
 
 #endif
