@@ -2,15 +2,16 @@
 CSCI 3010 Programming Project Workshop Practice Exercise 14 
 
 
-- [x] In teams of 3-4 people—create a public github repository
+- [x] Create a public github repository
 
-- [ ] Makefile (must have commands `make all`, `make clean`, `make test`)
+- [x] Make Makefile 
+- [x] Makefile has `make all`
+- [x] Makefile has `make clean`
+- [x] Makefile has  `make test`
+- [x] Created math_utils.h
+- [x] Define a Math class in math_utils.h
 
-- [ ] math_utils.h
-
-- [ ] Define a Math class
-
-- [ ] Math_utils.[cc|cpp]
+- [ ] Crated Math_utils.cpp
 
 Implement the following static methods:
 
