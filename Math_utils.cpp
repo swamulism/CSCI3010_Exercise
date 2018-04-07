@@ -30,6 +30,14 @@ int Math::GetDigit(int num, int place) {
 	}
 }
 
+bool Math::EqualParity(int x, int y){
+
+	if( ((x%2 == 0) && (y%2 == 0)) || ((x%2 != 0) && (y%2 !=0)) ) return true;
+	else return false;  
+} 
+
+
+
 bool Math::EqualParity(std::vector<int> nums) {
 	if(nums.size() > 2) {
 		return true;
