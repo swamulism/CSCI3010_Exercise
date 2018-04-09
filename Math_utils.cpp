@@ -37,6 +37,9 @@ int Math::GetDigit(int num, int place) {
 	}
 }
 
+
+// Returns true if two numbers have the same parity, false otherwise
+// @param x,y intiger either odd or even
 bool Math::EqualParity(int x, int y) {
 	return (x % 2 + 2) % 2 == (y % 2 + 2) % 2;
 } 
