@@ -8,7 +8,8 @@ test: Math_utils.o test.cpp
 	$(CXX) $(CXXFLAGS) $(CXXTESTFLAGS) test.cpp Math_utils.o -o test.out
 
 clean:
-	rm Math_utils.o math_utils.out
+	#rm Math_utils.o math_utils.out
+	rm Math_utils.o *.out *.gcda *.gcno *.dSYM
 
 math_utils: Math_utils.o
 	$(CXX) $(CXXFLAGS) main.cpp Math_utils.o -o math_utils.out
