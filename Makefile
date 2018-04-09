@@ -1,10 +1,11 @@
 CXX = g++
 CXXFLAGS	= -std=c++11 -ggdb -Wall
+CXXTESTFLAGS = --coverage
 
 all: math_utils
 
-test:
-	echo "bleh"
+test: Math_utils.o test.cpp
+	$(CXX) $(CXXFLAGS) $(CXXTESTFLAGS) test.cpp Math_utils.o -o test.out
 
 clean:
 	rm Math_utils.o math_utils.out

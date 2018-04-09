@@ -34,3 +34,5 @@
 # Other
 math_utils.dSYM
 .DS_Store
+*.gcda
+*.gcno
