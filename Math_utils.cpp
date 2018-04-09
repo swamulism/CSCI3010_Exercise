@@ -15,7 +15,7 @@ Samuel Eubanks
 using namespace std;
 
 bool Math::IsSquare(int num) {
-	if (num > 1) {
+	if (num < 1) {
 		return false;
 	}
 	float sqr = sqrt(num);
