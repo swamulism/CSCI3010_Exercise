@@ -5,7 +5,7 @@ Samuel Eubanks
 */
 
 
-#include "math_utils.h"
+#include "Math_utils.h"
 #include <iostream>
 #include <string>
 #include <cmath>
