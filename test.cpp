@@ -15,4 +15,9 @@ TEST_CASE ( "IsSquare works", "[IsSquare]") {
 		REQUIRE( !Math::IsSquare(-9) );
 		REQUIRE( !Math::IsSquare(0) );	
 	}
+	SECTION( "Large Intigers ") {
+                REQUIRE( Math::IsSquare(100000000) );
+               
+	}
+
 }
