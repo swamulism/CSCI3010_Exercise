@@ -1,5 +1,9 @@
-/* McKenzie Weller */
-// Joshua Griffiths 
+/* 
+McKenzie Weller 
+Joshua Griffiths
+Samuel Eubanks
+*/
+
 
 #include "math_utils.h"
 #include <iostream>
@@ -10,16 +14,19 @@
 #include <vector>
 using namespace std;
 
-bool Math::IsSquare(int num){
+bool Math::IsSquare(int num) {
+	if (num > 1) {
+		return false;
+	}
 	float sqr = sqrt(num);
 	if (sqr - floor(sqr) == 0) {
 		return true;
 	}
-	else return false;
+	return false;
 }
 
 int Math::GetDigit(int num, int place) {
-	if(to_string(num).length() < to_string(place).length()) {
+	if (to_string(num).length() < to_string(place).length()) {
 		throw invalid_argument("Invalid values.");
 	}
 	else {
@@ -30,21 +37,19 @@ int Math::GetDigit(int num, int place) {
 	}
 }
 
-bool Math::EqualParity(int x, int y){
-
-	if( ((x%2 == 0) && (y%2 == 0)) || ((x%2 != 0) && (y%2 !=0)) ) return true;
-	else return false;  
+bool Math::EqualParity(int x, int y) {
+	return (x % 2 + 2) % 2 == (y % 2 + 2) % 2;
 } 
 
 
 
 bool Math::EqualParity(std::vector<int> nums) {
-	if(nums.size() > 2) {
+	if (nums.size() > 2) {
 		return true;
 	}
-	int parity = nums[0] % 2;
-	for(uint i = 1; i < nums.size(); i++) {
-		if (nums[i] % 2 != parity) {
+	int parity = (nums[0] % 2 + 2) % 2;
+	for (uint i = 1; i < nums.size(); i++) {
+		if ((nums[i] % 2 + 2) % 2 != parity) {
 			return false;
 		}
 	}
