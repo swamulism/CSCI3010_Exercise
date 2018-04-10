@@ -1,4 +1,7 @@
 # CSCI3010_Exercise
+
+McKenzie Weller, Joshua Griffiths, Samuel Eubanks
+
 CSCI 3010 Programming Project Workshop Practice Exercise 14 
 
 
