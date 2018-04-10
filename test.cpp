@@ -34,7 +34,7 @@ TEST_CASE ("EqualParity works", "[EqualParity]") {
                 REQUIRE( !Math::EqualParity(2,13) );
                 REQUIRE( !Math::EqualParity(4,1) );
         }
-        SECTION( "Paired Negative numbers and 0 ") {
+        SECTION( "Paired Negative numbers and 0" ) {
                 REQUIRE( Math::EqualParity(-4,-2) );
 		REQUIRE( Math::EqualParity(-4, 2) );
 		REQUIRE( Math::EqualParity(-3,-9) );
@@ -51,7 +51,6 @@ TEST_CASE ("EqualParity works", "[EqualParity]") {
 	}
       	SECTION( "Large Intigers" ) {
                 REQUIRE( Math::EqualParity(100000000,2) );
- 
         }
 
 }
@@ -72,6 +71,26 @@ TEST_CASE ("EqualParity Vector works", "[EqualParity vector]") {
 		REQUIRE( !Math::EqualParity(test1) );
 		REQUIRE( !Math::EqualParity(test2) );
 		REQUIRE( !Math::EqualParity(test3) );
+	}
+	SECTION( "Paired Negative numbers" ) {
+		std::vector<int> test1 = {0, -2};
+		std::vector<int> test2 = {2, -2, 6, -8};
+		std::vector<int> test3 = {1, 5, -13, 51};
+		std::vector<int> test4 = {-1, -5, -13, -1};
+                REQUIRE( Math::EqualParity(test1) );
+		REQUIRE( Math::EqualParity(test2) );
+		REQUIRE( Math::EqualParity(test3) );
+		REQUIRE( Math::EqualParity(test4) );
+        }
+	SECTION( "Non paired Negative numbers" ) {
+		std::vector<int> test1 = {0, -1};
+		std::vector<int> test2 = {2, -2, 6, -7};
+		std::vector<int> test3 = {1, 5, -13, 50};
+		std::vector<int> test4 = {-1, -2, -12, -1};
+                REQUIRE( !Math::EqualParity(test1) );
+		REQUIRE( !Math::EqualParity(test2) );
+		REQUIRE( !Math::EqualParity(test3) );
+		REQUIRE( !Math::EqualParity(test4) );
 	}
 
 }
