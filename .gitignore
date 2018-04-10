@@ -32,7 +32,7 @@
 *.app
 
 # Other
-math_utils.dSYM
+*.dSYM/
 .DS_Store
 *.gcda
 *.gcno
