@@ -47,7 +47,7 @@ bool Math::EqualParity(int x, int y) {
 
 
 bool Math::EqualParity(std::vector<int> nums) {
-	if (nums.size() > 2) {
+	if (nums.size() < 2) {
 		return true;
 	}
 	int parity = (nums[0] % 2 + 2) % 2;
