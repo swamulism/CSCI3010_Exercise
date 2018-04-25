@@ -2,6 +2,18 @@
 #include "Catch.hpp"
 #include "Math_utils.h"
 #include <vector>
+#include <limits>
+
+
+TEST_CASE ("Testing distance") {
+    std::vector<int> p1 = {1, 2, 3};
+    std::vector<int> p2 = {1, 2, 3};
+    REQUIRE(Math::distance(p1, p2) == 0);
+    std::vector<int> p3 = {1, 1, 1};
+    double ans = 2.2360679775 + std::numeric_limits<double>::epsilon();
+    REQUIRE(Approx(Math::distance(p1, p3)) == ans);
+
+}
 
 TEST_CASE ("IsSquare works", "[IsSquare]") {
 	SECTION( "Square numbers" ) {
